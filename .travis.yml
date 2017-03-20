@@ -14,5 +14,5 @@ script:
 
 after_success:
   - go test 
-  - $HOME/gopath/bin/goveralls -repotoken 4gYjUjBmssKuQHB9zz4Z3X3GJ7uL6uT4E 
+  - $HOME/gopath/bin/goveralls -repotoken xMww1fDInxOtV4n4fAuByCM5sMuGYmVYB 
 
