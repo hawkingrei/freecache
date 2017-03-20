@@ -1,7 +1,18 @@
 language: go
-
 go:
-  - 1.3
-  - 1.4
+  - 1.6
+  - 1.7.5
+  - 1.8
+install:
+  - export PATH=$PATH:$HOME/gopath/bin
+  - go env
+  - go get github.com/mattn/goveralls
+  - go get github.com/hawkingrei/freecache 
 
-script: go get github.com/coocood/freecache && go test
+script:
+  - go  test -v ./...
+
+after_success:
+  - go test 
+  - $HOME/gopath/bin/goveralls -repotoken 4gYjUjBmssKuQHB9zz4Z3X3GJ7uL6uT4E 
+
